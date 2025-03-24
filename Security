@@ -1,0 +1,24 @@
+Linux OS Hardening
+1) User Account Management Ex:- Strong password policy
+2) Keep the Linux Systems updated on latest patches which addresses the SVM.
+3) Remove unwanted packages ex: http ,ftp which are insecure.
+4) Stop unused Services.
+5) Enable Fireall (iptables/firewalld).
+6) Enable SELinux
+7) Change the Listening service port number. By changing the port number in the /etc/config file of the service.
+
+$chage -l  to check the current password policy
+$chage --help  to change the password policy.
+
+$firewall-cmd --help  -->  iptables is replaced with firewall in newer RHEL version
+$iptables --help
+
+
+SE(Security Enhanced Linux) --> SE Linux defines the access and transition rights of every user, every application process and on a file the system is on.
+To control the access for an application process
+#sestatus  to check se linux status
+
+To remove/modily SE Linux
+need to modify the file /etc/sysconfig/selinux  or  setenforce 0/1   
+Change the mode to either Enforcing -->Enabled, permissive -->informs some activity byt wouldnt stop it, disable
+$chmod
