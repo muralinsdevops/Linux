@@ -1,0 +1,14 @@
+Processing
+Disk Writing
+Networking( NFS, File transfer)
+Hardware
+
+Troubleshooting Steps
+Check disk space (df -h)
+Checking prcessing (top, free ,lsmem , /proc/meminfo ,vmstat, lscpu)
+check disk issues (iostat -y 5 ,lsof)
+check networking (tcpdump -i <interface name> ,lsof -i -P -n | grep -i listen)
+uptime
+check logs 
+check hardware status by loggin to console
+other tools (htop , iotop)
